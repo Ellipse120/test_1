@@ -16,7 +16,7 @@ import java.io.IOException;
 public class In {
 
     private static int c;
-    private static boolean balnk(){
+    private static boolean blank(){
         return Character.isWhitespace((char) c);
     }
 
@@ -42,8 +42,8 @@ public class In {
         do {
             s += (char)c ;
             readC();
-        }while (!(empty()|balnk()));
-        while (!(empty() && balnk())) readC();
+        }while (!(empty()|blank()));
+        while (!(empty() && blank())) readC();
         return s;
     }
 
