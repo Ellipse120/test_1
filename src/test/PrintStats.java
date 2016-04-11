@@ -10,27 +10,25 @@ package test;
 
 /**
  * Created by lusai on 4/11/16.
- *
- * algorithms in java
- *
- * program 3.1
+ * <p>
+ * program 3.3
+ * <p>
+ * statistics of a sequence of random numbers
  */
-public class LogTable {
-    static int lg(int N) {
-        int i=0;
-        while (N > 0) {
-            i++;
-            N /= 2;
-            System.out.println(N);
-        }
-        return i;
-    }
 
+public class PrintStats {
     public static void main(String[] args) {
-        for (int N = 1000; N <= 1000000000;N*=10)
-            Out.print(lg(N)+" "+ N);
-        System.out.println("++++++");
-        System.out.println(125.0/2);
+        //int N = Integer.parseInt(args[0]);
+        int N = 100;
+        double m = 0.0, s = 0.0;
+        for (int i = 0; i < N; i++) {
+            int x = (int) (Math.random() * 10000);
+            double d = (double) x;
+            m += d / N;
+            s += (d * d) / N;
+        }
+        s = Math.sqrt(s - m * m);
+        Out.println("   Avg.: " + m);
+        Out.println("Std. dev.: " + s);
     }
-
 }
