@@ -14,6 +14,7 @@ package test;
 public class QuickF {
     public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
+        //int N = 10;
         int id[] = new int[N];
 
         for (int i = 0; i < N; i++) {
